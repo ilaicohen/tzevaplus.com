@@ -87,6 +87,13 @@
       --white:      #ffffff;
     }
 
+    html, body {
+      overflow-x: hidden; /* Prevents horizontal scroll */
+      width: 100%;
+      position: relative;
+      -webkit-overflow-scrolling: touch; /* Keeps scrolling smooth on iOS */
+    }
+
     html { scroll-behavior: smooth; }
 
     body {
