@@ -105,18 +105,22 @@
 
     .logo-text {
       color: #ffffff;
-      font-size: 20px;
-      font-weight: 800;
-      margin-right: 12px; /* Space between the logo and the text in RTL */
-      letter-spacing: -0.02em;
-      white-space: nowrap; /* Keeps the name on one line */
+      font-size: 19px; /* Slightly smaller for elegance */
+      font-weight: 700; /* Bold, but not 'heavy' */
+      margin-right: 14px; /* Increased spacing from the icon */
+      letter-spacing: -0.01em;
+      white-space: nowrap;
     }
     
-    /* On very small screens, you might want to shrink the text slightly */
-    @media (max-width: 480px) {
+    /* Mobile specific tweak */
+    @media (max-width: 768px) {
       .logo-text {
-        font-size: 18px;
-        margin-right: 8px;
+        font-size: 17px;
+        margin-right: 10px;
+      }
+      
+      .nav-logo img {
+        height: 34px; /* Slightly smaller logo icon for mobile balance */
       }
     }
     
@@ -742,20 +746,22 @@
 
   <!-- ── NAVBAR ── -->
   <nav id="navbar" role="navigation" aria-label="ניווט ראשי">
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#about">אודות</a></li>
-      <li><a href="#services">שירותים</a></li>
-      <li><a href="#gallery">גלריה</a></li>
-      <li><a href="#contact" class="nav-cta">צור קשר</a></li>
-    </ul>
-    <a href="/" class="nav-logo" aria-label="צבע פלוס — דף הבית">
-      <img src="photos/tzevapluslogo.png" alt="צבע פלוס — לוגו" width="120" height="40" />
-      <span class="logo-text">צבע פלוס</span>
-    </a>
-    <button class="burger" id="burger" aria-label="פתח תפריט" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
+  <a href="/" class="nav-logo" aria-label="צבע פלוס — דף הבית">
+    <img src="photos/tzevapluslogo.png" alt="צבע פלוס — לוגו" width="120" height="40" />
+    <span class="logo-text">צבע פלוס</span>
+  </a>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about">אודות</a></li>
+    <li><a href="#services">שירותים</a></li>
+    <li><a href="#gallery">גלריה</a></li>
+    <li><a href="#contact" class="nav-cta">צור קשר</a></li>
+  </ul>
+
+  <button class="burger" id="burger" aria-label="פתח תפריט" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
   <!-- ── HERO ── -->
   <header class="hero" id="home" role="banner">
