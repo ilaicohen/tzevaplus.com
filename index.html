@@ -202,8 +202,10 @@
     /* ── HERO ───────────────────────────────────────────── */
     .hero {
       position: relative;
-      height: 100vh;
-      min-height: 640px;
+      /* Use dvh for mobile support, fallback to vh for older browsers */
+      height: 100vh; 
+      height: 100dvh; 
+      min-height: 640px; /* Keep this to ensure enough room for text on small phones */
       display: flex;
       align-items: flex-end;
       overflow: hidden;
