@@ -103,6 +103,23 @@
       overflow-x: hidden;
     }
 
+    .logo-text {
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 800;
+      margin-right: 12px; /* Space between the logo and the text in RTL */
+      letter-spacing: -0.02em;
+      white-space: nowrap; /* Keeps the name on one line */
+    }
+    
+    /* On very small screens, you might want to shrink the text slightly */
+    @media (max-width: 480px) {
+      .logo-text {
+        font-size: 18px;
+        margin-right: 8px;
+      }
+    }
+    
     img { display: block; max-width: 100%; }
 
     /* ── NAVBAR ─────────────────────────────────────────── */
@@ -733,6 +750,7 @@
     </ul>
     <a href="/" class="nav-logo" aria-label="צבע פלוס — דף הבית">
       <img src="photos/tzevapluslogo.png" alt="צבע פלוס — לוגו" width="120" height="40" />
+      <span class="logo-text">צבע פלוס</span>
     </a>
     <button class="burger" id="burger" aria-label="פתח תפריט" aria-expanded="false">
       <span></span><span></span><span></span>
